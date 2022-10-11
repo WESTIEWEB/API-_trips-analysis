@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "play":"node ./src/report.js"
   },
   "devDependencies": {
     "@types/jest": "24.0.15",
