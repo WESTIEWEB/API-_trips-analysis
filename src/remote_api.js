@@ -1,42 +1,5 @@
 const { getDriver, getTrips, getVehicle } = require('api');
 
-// const { getDriver, getTrips, getVehicle } = require('../api/index');
-
-// const getAllTrips = async()=>{
-//     return await getTrips()
-// }
-
-// const getDriverInfo = async (id)=>{
-//     if(typeof(id)=='object'){
-//         console.log(' id is object')
-//        let driverFile = id.map(async (driverID)=>{
-//         try {
-//             let driverData = await getDriver(driverID)
-//             return driverData
-//         } catch (error) {
-//             return {}
-//         }
-         
-//         })
-//         return Promise.all( driverFile)
-//     } else if(id == undefined|| id ==false){
-//         return {}
-//     }else{
-//      console.log('id is single')
-//      return await getDriver(id)
-//     }
-// }
-
-// const getAllDrivers = async ()=>{
-//     let trips = await getAllTrips()
-//     let ids =  [...new Set(trips.map((data) => data.driverID))] 
-//     let drivers = await getDriverInfo(ids)
-//     return drivers
-    
-
-// }
-
-// const trips = await getTrips();
 
 async function getAllDrivers(trips) {
   // const trips = await getTrips();
@@ -48,7 +11,7 @@ async function getAllDrivers(trips) {
     {
        try {const result = await getDriver(id); 
         if(result){
-          console.log(result)
+          // console.log(result)
           return result}} catch(err) {}
   }
     ) );
